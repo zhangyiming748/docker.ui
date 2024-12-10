@@ -1,18 +1,16 @@
-FROM golang:1.18.0-alpine as build
-#RUN apk add build-base
-RUN apk add git --repository http://mirrors.aliyun.com/alpine/v3.15/main/
-RUN apk add libc-dev --repository http://mirrors.aliyun.com/alpine/v3.15/main/
-RUN apk add gcc --repository http://mirrors.aliyun.com/alpine/v3.15/main/
+FROM golang:1.23.4-alpine3.21 as build
+# RUN sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#http://mirrors4.tuna.tsinghua.edu.cn/alpine#g' /etc/apk/repositories
+RUN apk add build-base git libc-dev gcc
 ADD . /app
 WORKDIR /app
 ENV GO111MODULE=on
-ENV GOPROXY="https://goproxy.cn,direct"
+# ENV GOPROXY="https://goproxy.cn,direct"
 RUN go mod tidy
 RUN go mod download
 RUN go build -o server .
 
 
-FROM alpine
+FROM alpine:3.21.0
 
 WORKDIR /app
 COPY --from=build /app/server /app
