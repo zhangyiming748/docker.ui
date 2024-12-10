@@ -124,5 +124,5 @@ Official site: https://github.com/gohutool/docker.ui
 
 ## Visit the browser tool
 - Now, you can visit like as http://192.168.56.102:8999 .
-- Default Username/Password ginghan/123456
+- Default Username/Password zen/123456
 - Enjoy it now.

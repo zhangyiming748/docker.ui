@@ -36,8 +36,8 @@ func InitAdminUser() {
 	}
 
 	if c == 0 {
-		err = CreateUser("ginghan", "123456")
-
+		//err = CreateUser("ginghan", "123456")
+		err = CreateUser("zen, "123456")
 		if err != nil {
 			panic(err)
 		}
