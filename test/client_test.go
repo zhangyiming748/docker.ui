@@ -23,7 +23,7 @@ import (
 */
 
 func TestWSClient(t *testing.T) {
-	var addr = "localhost:8999"
+	var addr = "localhost:8889"
 	//var addr = "192.168.56.102:2375"
 
 	interrupt := make(chan os.Signal, 1)

@@ -51,7 +51,7 @@ const (
 
 func main() {
 	app := kingpin.New("docker-ui", "A docker management with UI.")
-	addr_flag := app.Flag("addr", "Addr: docker management listen addr.").Short('l').Default(":8999").String()
+	addr_flag := app.Flag("addr", "Addr: docker management listen addr.").Short('l').Default(":8889").String()
 	issuer_flag := app.Flag("issuer", "Issuer: token's issuer.").Short('i').Default(constants.DEFAULT_ISSUER).String()
 	expired_flag := app.Flag("token_expire", "Token_expire: many hour(s) token will expire.").Short('e').Default("24").Int()
 
