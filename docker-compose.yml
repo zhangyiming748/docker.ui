@@ -6,4 +6,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 8999:8889
-    image: joinsunsoft/docker.ui
+    image:  zhangyiming748/docker.ui
