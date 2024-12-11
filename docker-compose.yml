@@ -1,0 +1,9 @@
+name: <your project name>
+services:
+  docker.ui:
+    container_name: docker.ui
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8999:8889
+    image: joinsunsoft/docker.ui
