@@ -10,7 +10,7 @@ RUN go mod download
 RUN go build -o server .
 
 
-FROM alpine:3.21.0
+FROM golang:1.23.4-alpine3.21
 
 WORKDIR /app
 COPY --from=build /app/server /app
